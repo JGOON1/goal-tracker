@@ -48,7 +48,7 @@ const registerUser = asyncHandler( async(req, res) => {
 //@desc   authenticate a user
 //@route  POST /api/users/login
 //@access  public
-const loginUser =asyncHandler( async(req, res) => {
+const loginUser = asyncHandler( async(req, res) => {
     const {email, password} = req.body;
     // check for user email
     const user = await User.findOne({email})
@@ -69,7 +69,7 @@ const loginUser =asyncHandler( async(req, res) => {
 //@desc   get user data
 //@route  GET /api/me
 //@access  Private
-const getMe =asyncHandler( async(req, res) => {
+const getMe = asyncHandler( async(req, res) => {
     res.json({message: 'User data display'});
 })
 
